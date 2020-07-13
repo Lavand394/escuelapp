@@ -1,5 +1,6 @@
 package com.portafolio.ms.app.usuarios.models.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -14,8 +15,13 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="alumnos")
-public class Alumno {
+public class Alumno implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2039783107224786126L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
